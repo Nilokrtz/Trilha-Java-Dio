@@ -11,17 +11,17 @@ public class ContaTerminal {
         String nome = sc.next(); 
         sc.nextLine();
         System.out.print("Digite seu sobrenome: ");
-        String Sobrenome = sc.next(); 
+        String sobrenome = sc.next(); 
         sc.nextLine();
-        String NomeCLiente = nome.concat(" ").concat(Sobrenome); 
+        String nomeCLiente = nome.concat(" ").concat(sobrenome); 
         System.out.print("Digite sua agência: ");
         String Agencia = sc.next();
         System.out.print("Digite o número da sua agência: ");
-        int Numero = sc.nextInt();
+        int numero = sc.nextInt();
         System.out.print("Digite seu saldo: ");
-        double Saldo = sc.nextDouble(); 
+        double saldo = sc.nextDouble(); 
 
-        String texto = String.format("%nOlá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %.2f já está disponível para saque.%n",NomeCLiente,Agencia,Numero,Saldo);
+        String texto = String.format("%nOlá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %.2f já está disponível para saque.%n",nomeCLiente,Agencia,numero,saldo);
         System.out.println(texto);
 
         sc.close();
