@@ -1,17 +1,65 @@
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ProcessoSeletivo {
     public static void main(String[] args) throws Exception {
 
-        analisarCandidato(1900.0);
-        analisarCandidato(2200.0);
-        analisarCandidato(2000.0);
+        //analisarCandidato(1900.0);
+        //analisarCandidato(2200.0);
+        //analisarCandidato(2000.0);
 
-        selecaoCandidatos();
+        // selecaoCandidatos();
+        //imprimirSelecionados();
 
+        String [] candidatos = {"Nilo","Gabriel","Sofia","Dudu"};
+        for(String candidato:candidatos){
+            entrandoEmContato(candidato);
+        }
     }
 
-    
+    static void entrandoEmContato(String candidato){
+        int tentativaRealizadas = 1;
+        boolean continuarTentando = true;
+        boolean atendeu = false;
+
+        do {
+            atendeu = atender();
+            continuarTentando = !atendeu;
+            if(continuarTentando)
+                tentativaRealizadas++;
+            else
+                System.out.println("CONTATO REALIZADO COM SUCESSO");
+
+        } while (continuarTentando && tentativaRealizadas < 3);
+
+        if (atendeu) 
+            System.out.println("CONSEGUIMOS CONTATO COM " + candidato + " NA " + tentativaRealizadas + " TENTATIVA");    
+            else 
+            System.out.println("NÃO CONSEGUIMOS CONTATO COM " + candidato + " NÚMERO MAXIMO DE TENTATIVAS " + tentativaRealizadas + " REALIZADAS");    
+            
+    }
+
+    static  boolean atender(){
+        return new Random().nextInt(3)==1;
+    }
+
+    static void imprimirSelecionados(){
+        String [] candidatos = {"Nilo","Gabriel","Sofia","Dudu"};
+
+        System.out.println("Imprimindo a lista de candidatos unformando o índice do elemento\n");
+
+        for (int i = 0; i < candidatos.length; i++) {
+            System.out.println("O candidato de n° " + i + " é " + candidatos[i]);
+            // nesse for each conseguimos pegar o indice de cada elemento
+        }
+
+        System.out.println("Forma abreviada de interação for each");
+
+        for (String candidato : candidatos) {
+            System.out.println("O candidato selecionado foi " + candidato);
+            // ja nesse for each nãom conseguimos pegar o indice
+        }
+    }
 
     static void selecaoCandidatos(){
 
