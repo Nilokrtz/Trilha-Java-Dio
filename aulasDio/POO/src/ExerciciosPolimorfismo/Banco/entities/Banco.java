@@ -1,4 +1,4 @@
-package entities;
+package ExerciciosPolimorfismo.Banco.entities;
 
 public class Banco {
     

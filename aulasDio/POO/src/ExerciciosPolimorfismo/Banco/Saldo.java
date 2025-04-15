@@ -1,6 +1,7 @@
+package ExerciciosPolimorfismo.Banco;
 import java.util.Scanner;
 
-import entities.Banco;
+import ExerciciosPolimorfismo.Banco.entities.Banco;
 
 public class Saldo {
     public static void main(String[] args)  {
