@@ -24,7 +24,7 @@ public class Main {
         v.AlterarSenha();        
         a.AlterarDados();        
         a.RealizarLogin();
-        a.AlterarSenha();
+        a.AlterarSenha();   
 
         v.RealizarVenda(2);
         v.ConsultarVendas();
